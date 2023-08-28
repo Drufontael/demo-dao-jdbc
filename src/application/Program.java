@@ -2,7 +2,6 @@ package application;
 
 import model.entities.Department;
 import model.entities.Seller;
-
 import java.time.LocalDate;
 
 public class Program {
