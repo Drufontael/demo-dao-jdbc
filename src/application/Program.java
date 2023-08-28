@@ -30,6 +30,11 @@ public class Program {
         Seller newSeller=new Seller(null,"Greg","greg@gmail.com", LocalDate.now(),4000.0,new Department(2,null));
         sellerDao.insert(newSeller);
         System.out.println("Inserted! New id = "+newSeller.getId());
+        System.out.println("\n=== TEST 5: Seller -> update ===");
+        seller=sellerDao.findById(9);
+        seller.setBirthDate(LocalDate.of(1985,8,28));
+        sellerDao.update(seller);
+        System.out.println("Update completed!");
 
 
         DB.closeConnection();
