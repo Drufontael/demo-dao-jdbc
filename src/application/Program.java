@@ -35,6 +35,9 @@ public class Program {
         seller.setBirthDate(LocalDate.of(1985,8,28));
         sellerDao.update(seller);
         System.out.println("Update completed!");
+        System.out.println("\n=== TEST 6: Seller -> deleteById ===");
+        sellerDao.deleteById(10);
+        System.out.println("Delete completed!");
 
 
         DB.closeConnection();
